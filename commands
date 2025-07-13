@@ -1,0 +1,15 @@
+sudo mkdir -p /mnt/disc
+sudo mount -o loop rhel-baseos-9.0-x86_64-dvd.iso /mnt/disc
+sudo vi /etc/yum.repos.d/rhel9.repo
+sudo dnf clean all
+sudo dnf repolist
+sudo dnf install net-tools
+
+sudo cp /etc/fstab /etc/fstab.bak
+sudo vi /etc/fstab
+UUID=1234-ABCD  /mnt/data  ext4  defaults  0  2
+/dev/sdb1  /mnt/storage  ext4  defaults  0  2
+blkid
+mount -a
+
+sudo systemctl daemon-reexec

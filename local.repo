@@ -1,0 +1,12 @@
+[BaseOS]
+name=BaseOS Packages
+baseurl=file:///tmp/redhat/BaseOS/
+enabled=1
+gpgcheck=0
+
+[AppStream]
+name=AppStream Packages
+baseurl=file:///tmp/redhat/AppStream/
+enabled=1
+gpgcheck=0
+
